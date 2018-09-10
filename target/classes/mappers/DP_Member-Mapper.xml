@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE  mapper 
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="memberMapper">
+
+<!-- 회원가입 -->
+   <insert id="memberInsert" parameterType="dpmvo">
+      INSERT INTO DP_Member (dp_name, dp_pwd, dp_findpwd_q, dp_findpwd_a, dp_nick, dp_tel1, dp_tel2, dp_tel3, dp_addr, dp_email1, dp_email2, dp_point) 
+                  VALUES (#{dp_name}, #{dp_pwd}, #{dp_findpwd_q}, #{dp_findpwd_a}, #{dp_nick}, #{dp_tel1}, #{dp_tel2}, #{dp_tel3}, #{dp_addr}, #{dp_email1}, #{dp_email2}, 0)
+   </insert>                  
+   
+   <!-- 아이디 중복확인 -->
+      <select id="memberInsertIdCheck" parameterType="String" resultType="String">
+         SELECT dp_name FROM DP_Member WHERE dp_name= #{dp_name}
+      </select>
+   
+   <!-- 닉네임 중복확인 -->
+      <select id="memberInsertNickCheck" parameterType="String" resultType="String">
+         SELECT dp_nick FROM DP_Member WHERE dp_nick= #{dp_nick}
+      </select>
+   
+<!-- 로그인 -->
+      <select id="memberLogin" parameterType="dpmvo" resultType="dpmvo">
+         SELECT dp_id FROM DP_Member WHERE dp_name= #{dp_name} and dp_pwd= #{dp_pwd} 
+      </select>
+
+   <!-- 회원정보 보기 -->
+         <select id="memberDetail">
+            SELECT * FROM DP_Member WHERE dp_id= #{dp_id}
+         </select>
+                     
+   <!-- 회원정보 수정 -->                           
+      <update id="memberUpdate">
+          DP_Member SET (dp_pwd=#{dp_pwd}, dp_findpwd_q= #{dp_findpwd_q}, dp_findpwd_a= #{dp_findpwd_a}
+                     , dp_tel1= #{dp_tel1}, dp_tel2= #{dp_tel2}, dp_tel3= #{dp_tel3}
+                     , dp_addr= #{dp_addr}, dp_email1= #{dp_email1}, dp_email2= #{dp_email2})      
+      </update>
+
+<!-- 회원탈퇴 -->
+   <delete id="memberDropout">
+      DELETE dp_id FROM DP_Member WHERE dp_id= #{dp_id}
+   </delete>
+
+
+</mapper>
+

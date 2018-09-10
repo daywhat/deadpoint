@@ -1,0 +1,372 @@
+@charset "UTF-8";
+
+
+footer{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.logotitle{
+	text-align: center;
+	margin-top: 10px;
+}
+
+.logoimg{
+	width: 330px;
+	height: auto;
+}
+
+.mainLogo{
+	width: 10%;
+	
+}
+
+.lineCost{
+	margin-bottom: 0px;
+	margin-top: 0px;
+}
+
+.menuPart{
+	display: inline-block;
+	width: 49%;
+}
+
+.menuTree{
+	margin-left: -30px;
+}
+
+.menuTree ul{
+	list-style: none;
+	margin-bottom: 0px;
+}
+
+.menuTree li{
+	display: inline-block;
+	padding-right: 5px;
+	border-right: 1px solid rgba(0,0,0,.1);
+	font-color: gray;
+}
+
+.menuLogin{
+	text-align: right;
+}
+
+.menuLogin ul{
+	list-style: none;
+	margin-bottom: 0px;
+}
+
+.menuLogin li{
+	display: inline-block;
+	padding-right: 5px;
+}
+
+.menuTree a:link {
+	color: black; text-decoration: none;
+}
+.menuTree a:visited {
+	color: black; text-decoration: none;
+}
+.menuTree a:hover {
+	color: red; text-decoration: none;
+}
+
+
+.menuLogin a:link {
+	color: black; text-decoration: none;
+}
+.menuLogin a:visited {
+	color: black; text-decoration: none;
+}
+.menuLogin a:hover {
+	color: black; text-decoration: none;
+}
+
+
+.navTop{
+	padding: 0px;
+	margin: 0px;	
+}
+
+.navBottom{
+	margin: 10px;
+}
+
+.footInfo{
+	text-align : center;
+}
+
+.footLogo{
+	width: 100px;
+}
+
+.midw{
+	margin-top:30px;
+}
+
+.endw{
+	margin-top:15px;
+	font-size:13px;
+}
+
+.navHr{
+	margin-bottom: 3px;
+	width: 95%;
+}
+
+/* Join CSS */
+.joinBatang{
+	color: white;
+	background: black;
+	text-align: center;
+	width: 70%;
+	height: 750px;
+	margin-left: 15%;
+	margin-right: 15%;
+}
+
+.joinLogo{
+	margin-top: 30px;
+	margin-bottom: 30px;
+	
+}
+
+.joinTable{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	align: center;
+}
+
+.joinTable td{
+	font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.tdN1{
+	text-align: right;
+	width: 40%;
+}
+.tdN2{
+	text-align: left;
+	width: 60%;
+}
+
+.joinBtn{
+	margin-left: 15px;
+	margin-right: 15px;
+}
+/* */
+
+/* */
+.loginBatang{
+		color: white;
+	background: black;
+	text-align: center;
+	width: 50%;
+	height: 300px;
+	margin-left: 25%;
+	margin-right: 25%;
+}
+
+.loginLogo{
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+.loginTable{
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+	align: center;
+}
+
+.loginTable td{
+	font-family: 'Nanum Gothic Coding', monospace;
+}
+
+.intro{
+	text-align: center;
+}
+
+.introTxt{
+	font-weight: bold;
+}
+
+.shopFit{
+	text-align: left;
+	font-family: 'Black Han Sans', sans-serif;
+}
+.shopFit a:link {
+	color: black; text-decoration: none;
+}
+.shopFit a:visited {
+	color: black; text-decoration: none;
+}
+.shopFit a:hover {
+	color: white; text-decoration: none;
+	-webkit-text-stroke: 1px black;
+}
+
+.otInfoTxt{
+	font-family: 'Abril Fatface', cursive;
+}
+
+.otInfoTable{
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;
+	
+}
+
+.otInfoTable th{
+	height: 35px;
+	background: #f9f9f9;
+	color: black;
+	text-align: center;
+	border-top: 1px solid #c1c1c1;
+	border-bottom: 1px solid #c1c1c1;
+}
+
+.otInfoTable td{
+	text-align: center;
+	border-bottom: 1px solid #c1c1c1;
+
+}
+
+.noticeTxt{
+	font-family: 'Abril Fatface', cursive;
+}
+
+.noticeTable{
+	width: 70%;
+	margin-left: 15%;
+	margin-right: 15%;	
+}
+
+.noticeTable th{
+	height: 35px;
+	background: #f9f9f9;
+	color: black;
+	text-align: center;
+	border-top: 1px solid #c1c1c1;
+	border-bottom: 1px solid #c1c1c1;;
+}
+
+.noticeTable td{
+	text-align: center;
+	border-bottom: 1px solid #c1c1c1;
+}
+
+.thN1{
+	width: 10%
+}
+.thN2{
+	width: 50%
+}
+.thN3{
+	width: 20%
+}
+.thN4{
+	width: 10%
+}
+.thN5{
+	width: 10%
+}
+
+
+/* instagram API */
+
+ #instaPics {  
+	max-width: 90%;
+	margin-left: 10%;
+	overflow: hidden;  
+}  
+
+.insta-box {  
+	position: relative;  
+	width: 30%;  
+	height: auto;  
+	float: left;  
+	margin: 4px;  
+	border: 1px solid #ddd;  
+}  
+
+.image-layer {  
+	overflow: hidden;  
+	width: 100%;  
+	height: 100%;  
+}  
+
+.image-layer img {  
+	max-width: 100%;  
+}  
+
+.caption-layer {  
+	display: none;  
+	position: absolute;  
+	top: 0;  
+	background: rgba(255,255,255,0.8);  
+	height: 100%;  
+	width: 100%;  
+	padding: 10px;  
+	box-sizing: border-box;  
+	font-size: 10px;  
+	color: #333;  
+}  
+
+.insta-likes {  
+	float: right;  
+}  
+
+.instaImg{
+	width: 100%;
+	height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

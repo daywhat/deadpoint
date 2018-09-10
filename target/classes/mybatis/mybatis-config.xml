@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+  PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+   <!--별칭등록  -->
+   
+   <typeAliases>
+      <!-- <typeAlias type="org.exit.domain.DP_MemberVO" alias="dpmvo"/> -->
+      <typeAlias type="org.exit.domain.DP_MemberVO" alias="dpmvo"/>
+      <typeAlias type="org.exit.domain.DP_CouponVO" alias="dpcvo"/>
+      <typeAlias type="org.exit.domain.DP_OrderVO" alias="dpodvo"/>
+      <typeAlias type="org.exit.domain.DP_OtInfoVO" alias="dpotvo"/>
+      <typeAlias type="org.exit.domain.DP_ReviewVO" alias="dprvo"/>
+      <typeAlias type="org.exit.domain.DP_ProductVO" alias="dppvo"/>
+   </typeAliases>
+
+
+</configuration>
