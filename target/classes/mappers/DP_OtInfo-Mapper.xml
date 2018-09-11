@@ -6,43 +6,43 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="otinfoMapper">
 
 <!-- 게시물 작성 -->
-	<insert id="otWrite">
-		INSERT INTO c_board (c_title , c_content 
-						   , c_hit	, c_ref	, c_date 
-						   , dp_id , dp_nick)
-					 VALUES (#{c_title}, #{c_content}
-						   , 0, 0, NOW()
-						   , #{dp_id}, #{dp_nick})
-	</insert>
+   <insert id="otWrite">
+      INSERT INTO c_board (c_title , c_content 
+                     , c_hit   , c_ref   , c_date 
+                     , dp_id , dp_nick)
+                VALUES (#{c_title}, #{c_content}
+                     , 0, 0, NOW()
+                     , #{dp_id}, #{dp_nick})
+   </insert>
 
 <!-- 게시물 리스트 보기 -->
-	<select id="otList">
-		SELECT * 
-			FROM c_board
-			WHERE dp_id = #{dp_id}
-	</select>
+   <select id="otList">
+      SELECT * 
+         FROM c_board
+         WHERE dp_id = #{dp_id}
+   </select>
 
-	<!-- 게시물 리스트 상세보기 -->
-		<select id="otListDetail">
-		SELECT * 
-			FROM c_board
-			WHERE dp_id = #{dp_id}
-	</select>		
-	
-		<!-- 게시물 삭제(리스트 상세보기 에서) -->
-			<delete id="otDelete">
-				DELETE FROM c_board 
-					WHERE c_id = #{c_id} 
-					AND dp_id = #{dp_id};
-			</delete>
-		
-		<!-- 게시물 수정(리스트 상세보기 에서) -->
-			<update id="otUpdate">
-				UPDATE c_board SET c_title  =#{c_title}, c_content = #{c_content}
-					WHERE c_id = #{c_id} 
-					AND dp_id = #{dp_id};				
-			</update>
-	
+   <!-- 게시물 리스트 상세보기 -->
+      <select id="otListDetail">
+      SELECT * 
+         FROM c_board
+         WHERE dp_id = #{dp_id}
+   </select>      
+   
+      <!-- 게시물 삭제(리스트 상세보기 에서) -->
+         <delete id="otDelete">
+            DELETE FROM c_board 
+               WHERE c_id = #{c_id} 
+               AND dp_id = #{dp_id};
+         </delete>
+      
+      <!-- 게시물 수정(리스트 상세보기 에서) -->
+         <update id="otUpdate">
+            UPDATE c_board SET c_title  =#{c_title}, c_content = #{c_content}
+               WHERE c_id = #{c_id} 
+               AND dp_id = #{dp_id};            
+         </update>
+   
 <!-- 게시물에 댓글 달기 -->
 
 

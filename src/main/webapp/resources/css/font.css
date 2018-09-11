@@ -3,26 +3,24 @@
 .fontAbril{
 	font-family: 'Abril Fatface', cursive;
 }
-
 .fontBHS{
 	font-family: 'Black Han Sans', sans-serif;
 }
-
 .fontSunf{
 	font-size: 14px;
 	font-weight: bold;
 	font-family: 'Sunflower', sans-serif;
 }
-
 .font{
 	font-family: 'Nanum Gothic Coding', monospace;
 }
-
 .fontBold{
 	font-family: 'Nanum Gothic Coding', monospace;
 	font-weight: bold;
 }
-
 .fontJua{
 	font-family: 'Jua', sans-serif;
+}
+.fontOsW{
+	font-family: 'Oswald', sans-serif;
 }

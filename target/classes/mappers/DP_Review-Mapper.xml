@@ -6,59 +6,59 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="reviewMapper">
 
 <!-- 상품평 작성 -->
-	<insert id="reviewInsert">
-		INSERT INTO after_board ( 
-					b_id, b_title, b_content
-					, b_hit, b_ref, b_date
-					, b_dppro_id, dp_id, dp_nick)
-			VALUES (AI, #{b_title}, #{b_content}
-					, 0, 0, NOW()
-					, #{b_dppro_id}, #{dp_id}, #{dp_nick})
-	</insert>
+   <insert id="reviewInsert">
+      INSERT INTO after_board ( 
+               b_id, b_title, b_content
+               , b_hit, b_ref, b_date
+               , b_dppro_id, dp_id, dp_nick)
+         VALUES (AI, #{b_title}, #{b_content}
+               , 0, 0, NOW()
+               , #{b_dppro_id}, #{dp_id}, #{dp_nick})
+   </insert>
 
 <!-- 상품평 리스트 보기 -->
-	<select id="reviewList">
-		SELECT * 
-			FROM after_board
-			WHERE dp_id = #{dp_id}
-	</select>
-	
-	<!-- 상품평 리스트 상세보기 -->
-		<select id="reviewListDetail">
-			SELECT * 
-				FROM after_board
-				WHERE dp_id = #{dp_id}
-		</select>
-	
-		<!-- 상품평 삭제(리스트 상세보기 에서) -->
-			<delete id="reviewDelete">
-				DELETE FROM after_board
-					WHERE b_id = #{b_id}
-					AND dp_id = #{dp_id}
-			</delete>
-		
-		<!-- 상품평 수정(리스트 상세보기 에서) -->
-			<update id="reviewUpdate">
-				UPDATE after_board SET b_title = #{b_title}, b_content = #{b_content}
-					WHERE b_id = #{b_id} 
-					AND dp_id = #{dp_id};
-			</update>
+   <select id="reviewList">
+      SELECT * 
+         FROM after_board
+         WHERE dp_id = #{dp_id}
+   </select>
+   
+   <!-- 상품평 리스트 상세보기 -->
+      <select id="reviewListDetail">
+         SELECT * 
+            FROM after_board
+            WHERE dp_id = #{dp_id}
+      </select>
+   
+      <!-- 상품평 삭제(리스트 상세보기 에서) -->
+         <delete id="reviewDelete">
+            DELETE FROM after_board
+               WHERE b_id = #{b_id}
+               AND dp_id = #{dp_id}
+         </delete>
+      
+      <!-- 상품평 수정(리스트 상세보기 에서) -->
+         <update id="reviewUpdate">
+            UPDATE after_board SET b_title = #{b_title}, b_content = #{b_content}
+               WHERE b_id = #{b_id} 
+               AND dp_id = #{dp_id};
+         </update>
 
 <!-- 상품평에 댓글 달기 -->
-	<insert id="reviewInsertPlus">
-		INSERT INTO after_board_plus (
-					bplus_id, after_bcontent, after_bdate
-					, b_id, dp_id, dp_nick)
-			VALUES (AI, #{after_bcontent}, NOW()
-					, #{d_id}, #{dp_id}, #{dp_nick})
-			
-	</insert>
+   <insert id="reviewInsertPlus">
+      INSERT INTO after_board_plus (
+               bplus_id, after_bcontent, after_bdate
+               , b_id, dp_id, dp_nick)
+         VALUES (AI, #{after_bcontent}, NOW()
+               , #{d_id}, #{dp_id}, #{dp_nick})
+         
+   </insert>
 <!-- 상품평 댓글 지우기 -->
-	<delete id="reviewDeletePlus">
-		DELETE FROM after_board_plus
-			WEHRE bplus_id = #{bplus_id}
-			AND dp_id = #{dp_id}
-	</delete>
+   <delete id="reviewDeletePlus">
+      DELETE FROM after_board_plus
+         WEHRE bplus_id = #{bplus_id}
+         AND dp_id = #{dp_id}
+   </delete>
 
 
 

@@ -10,7 +10,7 @@
 </head>
 <body>
 <jsp:include page="../nav.jsp" />
-<form id="joinForm" method="post" action="join.do" >
+<form id="joinForm" method="post">
 <div class="joinBatang">
 
 <img class="joinLogo" src="./resources/img/logo/login_Logo(white).png">
@@ -35,7 +35,7 @@
    <tr>
       <td class="tdN1"><label>Question&nbsp;</label></td>
       <td class="tdN2"><select style="width: 300px;" id="dp_findpwd_q" name="dp_findpwd_q">
-      <option>Select Question</option>
+      <option value="0">Select Question</option>
       <option value="1">가장 좋아하는 색깔은 ?</option>
       <option value="2">감명깊게 본 영화 제목은 ?</option>
       <option value="3">부모님의 고향은 ?</option>
@@ -61,7 +61,10 @@
       <td class="tdN1"><label>Mail&nbsp;</label></td>
       <td class="tdN2"><input type="text" id="dp_email1" name="dp_email1">
       <label>@&nbsp;</label>
-      <input type="text" id="dp_email2" name="dp_email2"></td>
+      <input type="text" id="dp_email2" name="dp_email2">
+      <br>
+      <input type="checkbox" id="dp_email_agree" name="dp_email_agree">광고성 이메일 수신에 동의하기 (선택)
+      </td>
    </tr>
    <tr>
       <td class="tdN1"><label>Terms of Use&nbsp;</label></td>

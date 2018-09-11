@@ -6,20 +6,51 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="productMapper">
 
 
-<!-- 재고관리에서 상품 리스트 보기(샵에 올라오는 상품 = DB에 있는 상품 = 재고관리에서 등록/수정/삭제하는 상품) -->
-	<select id="productList"></select>
+<!-- 재고관리에서 전체 상품 리스트 보기(샵에 올라오는 상품 = DB에 있는 상품 = 재고관리에서 등록/수정/삭제하는 상품) -->
+   <select id="productList">
+      SELECT * 
+         FROM dp_product
+   </select>
+   
+<!-- 재고관리에서 남성 상품 리스트 보기 -->
+   <select id="productListMale">
+      SELECT * 
+         FROM dp_product
+         WHERE dppro_gender= 1
+   </select>
+   
+<!-- 재고관리에서 여성 상품 리스트 보기 -->
+   <select id="productListFemale">
+      SELECT * 
+         FROM dp_product
+         WHERE dppro_gender= 2
+   </select>
+   
 
-	<!-- 상품 등록 -->
-		<insert id="productInsert"></insert>
-	
-	<!-- 상품 수정 -->
-		<update id="productUpdate"></update>
-	
-	<!-- 상품 삭제 -->
-		<delete id="productDelete"></delete>
+   <!-- 상품 등록 -->
+      <insert id="productInsert">
+         INSERT INTO dp_product (dppro_cat, dppro_price
+                          , dppro_name, dppro_gender)
+            VALUES (#{dppro_cat}, #{dppro_price}
+                          , #{dppro_name}, #{dppro_gender})
+      </insert>
+   
+   <!-- 상품 수정 -->
+      <update id="productUpdate">
+         UPDATE dp_product SET dppro_cat= #{dppro_cat}, dppro_price= #{dppro_price}
+                          , dppro_name= #{dppro_name}, dppro_gender= #{dppro_gender}
+            WHERE dppro_id= #{dppro_id}
+      </update>
+   
+   <!-- 상품 삭제 -->
+      <delete id="productDelete">
+         DELETE 
+            FROM dp_product
+            WHERE dppro_id= #{dppro_id}
+      </delete>
 
 <!-- 샵에 상품 리스트 뿌리기 / 상품 상세보기-->
-	<!-- <select id="productList"></select> -->
-	
+   <!-- <select id="productList"></select> -->
+   
 
 </mapper>

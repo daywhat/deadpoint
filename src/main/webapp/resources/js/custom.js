@@ -36,7 +36,63 @@ $(document).ready(function(){
 			}
 		});
 	});
-
+	
+	
+	
+	$("#joinForm").submit(function(e){
+		if($('#dp_nick').val() == ""){
+			alert("닉네임을 입력해주세요.");
+			return false;
+		}else if($('#dp_name').val() == ""){
+			alert("아이디를 입력해주세요.");
+			return false;
+		}else if($('#dp_pwd').val() == ""){
+			alert("비밀번호를 입력해주세요.");
+			return false;
+		}else if($('#dp_pwdCheck').val() == ""){
+			alert("비밀번호를 확인해주세요");
+			return false;
+		}else if($('#dp_findpwd_q').val() == "0"){
+			alert("비밀번호 질문을 선택해주세요.");
+			return false;
+		}else if($('#dp_findpwd_a').val() == ""){
+			alert("비밀번호 질문의 답을 적어주세요.");
+			return false;
+		}else if($('#dp_tel1').val() == ""){
+			alert("전화번호를 정확히 입력해주세요.");
+			return false;
+		}else if($('#dp_tel2').val() == ""){
+			alert("전화번호를 정확히 입력해주세요.");
+			return false;
+		}else if($('#dp_tel3').val() == ""){
+			alert("전화번호를 정확히 입력해주세요.");
+			return false;
+		}else if($('#dp_addr').val() == ""){
+			alert("주소를 입력해주세요.");
+			return false;
+		}else if($('#dp_email1').val() == ""){
+			alert("이메일을 정확히 입력해주세요.");
+			return false;
+		}else if($('#dp_email1').val() == ""){
+			alert("이메일을 정확히 입력해주세요.");
+			return false;
+		}else if($('#dp_term').is(":checked") != true){
+			alert("약관에 동의하여 주십시오.");
+			return false;
+		}else{
+		e.preventDefault();
+		var data = $(this).serialize();
+		$.ajax({
+			url:"join.do",
+			type:"POST",
+			data: data,
+			success: function(data){
+					location.href= data + ".go";
+				}
+		});
+		}
+	});
+	
 /*
  *  비밀번호 입력시 입력창과 입력 확인창을 대조하여 
  *  비밀번호가 같을시 color를 blue로 변경하여 label에 text 입력
@@ -85,8 +141,11 @@ function nickCheck(){
 		success: function(data){
 			if(data == "1"){
 				alert("회원가입이 가능한 닉네임입니다.");
+				return false;
 			}else if( data == "0")
 				alert("회원가입이 불가능한 닉네임입니다.");
+				$('#dp_nick').val("");
+				$('#dp_nick').focus();
 			}
 		})
 	}
@@ -103,35 +162,18 @@ function idCheck(){
 		success: function(data){
 			if(data == "1"){
 				alert("회원가입이 가능한 아이디입니다.")
+				return false;
 			}else if( data == "0")
 				alert("회원가입이 불가능한 아이디입니다.")
+				$('#dp_name').val("");
+				$('#dp_name').focus();
 			}
 		})
 	}
 }	
 
 
-$("#loginForm").submit(function(e){
-	var chbox = $('#dp_term');
-		if (ckbox.is(":checked")) {
-		e.preventDefault();
-		var data = $(this).serialize();
-		$.ajax({
-			url:"join.do",
-			type:"POST",
-			data: data,
-			success: function(data){
-				if(data == "1"){
-					location.href="welcome.go";
-				}else if(data == "0"){
-					alert("아이디, 비밀번호를 확인하여 주십시오.");
-				}
-			}
-		});
-		}else{
-			alert("약관에 동의하여 주십시오.")
-		}
-	});
+
 
 
 

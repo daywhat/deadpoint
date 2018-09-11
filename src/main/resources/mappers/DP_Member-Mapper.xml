@@ -7,8 +7,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- 회원가입 -->
    <insert id="memberInsert" parameterType="dpmvo">
-      INSERT INTO DP_Member (dp_name, dp_pwd, dp_findpwd_q, dp_findpwd_a, dp_nick, dp_tel1, dp_tel2, dp_tel3, dp_addr, dp_email1, dp_email2, dp_point) 
-                  VALUES (#{dp_name}, #{dp_pwd}, #{dp_findpwd_q}, #{dp_findpwd_a}, #{dp_nick}, #{dp_tel1}, #{dp_tel2}, #{dp_tel3}, #{dp_addr}, #{dp_email1}, #{dp_email2}, 0)
+      INSERT INTO DP_Member (dp_name, dp_pwd, dp_findpwd_q, dp_findpwd_a, dp_nick, dp_tel1, dp_tel2, dp_tel3, dp_addr, dp_email1, dp_email2, dp_email_agree,  dp_point) 
+                  VALUES (#{dp_name}, #{dp_pwd}, #{dp_findpwd_q}, #{dp_findpwd_a}, #{dp_nick}, #{dp_tel1}, #{dp_tel2}, #{dp_tel3}, #{dp_addr}, #{dp_email1}, #{dp_email2}, ${dp_email_agree}, 0)
    </insert>                  
    
    <!-- 아이디 중복확인 -->
@@ -40,9 +40,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <!-- 회원탈퇴 -->
    <delete id="memberDropout">
-      DELETE dp_id FROM DP_Member WHERE dp_id= #{dp_id}
+      DELETE FROM DP_Member WHERE dp_id= #{dp_id}
    </delete>
 
 
 </mapper>
-

@@ -12,7 +12,7 @@
 
 <nav>
  <div class="navTop">
-	<div class="menuPart menuTree">
+	<div class="navPart navTree">
 		<ul class="fontBold">
 			<li><a class="" href="intro.go">deadpoint</a></li>
 			<li><a class="" href="totalShop.go">shop</a></li>
@@ -22,7 +22,7 @@
 			<li><a class="" href="notice.go">notice</a></li>
 		</ul>
 	</div>
-	<div class="menuPart menuLogin">
+	<div class="navPart navLogin">
 		<ul class="font">
 		
 		<c:if test="${id != null}">

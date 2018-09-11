@@ -11,6 +11,7 @@
 <body>
 <jsp:include page="nav.jsp" />
 
+<!-- 케러셀 이미지 사이즈 1200 x 700 -->
 <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>

@@ -26,12 +26,21 @@ public class JoinController {
 	// join us to go welcome.jsp
 	
 	@RequestMapping(value="/join.do", method = RequestMethod.POST)
+	@ResponseBody
 	public String join(DP_MemberVO dpmvo) {
-
+		System.out.println("111");
 		dpms.DP_MemberInsert(dpmvo);
 		
-		return "member/welcome";
+		return "welcome";
 	}
+	
+	// join us to go welcome.jsp
+	
+		@RequestMapping(value="/welcome.go", method = RequestMethod.GET)
+		public String welcome() {
+			
+			return "member/welcome";
+		}
 	
 	// customer click to cancle button back to index page 
 	

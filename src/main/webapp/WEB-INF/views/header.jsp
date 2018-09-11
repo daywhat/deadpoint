@@ -20,6 +20,7 @@
 <link href="https://fonts.googleapis.com/css?family=Sunflower:300" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:700" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Jua" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 
 <!-- JSTL  -->
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
