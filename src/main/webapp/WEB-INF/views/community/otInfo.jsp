@@ -21,7 +21,7 @@
 <!-- login Session 값 있으면 글쓰기 버튼 출력 -->
 <c:if test="${id != null}">
 <tr>
-	<td class="wirteBtn" style="text-align: right;" colspan="5"><input class="btn btn-light" type="button" value="Write"></td>
+	<td class="wirteBtn" style="text-align: right;" colspan="5"><input class="btn btn-light" type="button" onclick="location.href='otInfoWrite.go'"value="Write"></td>
 </tr>
 </c:if>
 <tr>
@@ -35,41 +35,39 @@
 	<th class="thN5">Ref</th>
 </tr>
 
-<%-- <c:forEach items="otInfoList" var="ot">
+<c:forEach items="${otInfoList}" var="ot">
 <tr>	
 	<td>${ot.c_id}</td>
 	<td>${ot.c_title}</td>
 	<td>${ot.dp_nick}</td>
-	<td>${ot.dp_hit}</td>
-	<td>${ot.dp_ref}</td>
-	
+	<td>${ot.c_hit}</td>
+	<td>${ot.c_ref}</td>
 </tr>
-</c:forEach> --%>
-<tr>
-	<td>1</td>
-	<td>옷정보 테스트 글 1</td>
-	<td>관리자</td>
-	<td>0</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>2</td>
-	<td>옷정보 테스트 글 2</td>
-	<td>관리자</td>
-	<td>0</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>3</td>
-	<td>옷정보 테스트 글 3</td>
-	<td>관리자</td>
-	<td>0</td>
-	<td>0</td>
-</tr>
-	
+</c:forEach> 	
 
 </table>
 </div>
+<br>
+ <div class="paging">
+	
+ <!-- 이전 -->
+ <c:if test="${startPage > countPage}">
+	<a href="otInfo.go?pageNum=${startPage - countPage}">Pre</a>
+ </c:if>
+ 
+  <!-- 페이지번호(for) -->
+ <c:forEach begin="${startPage }" end="${endPage}" var ="i">
+<%-- <button class="page-item" type="button" onclick="location.href='otInfo.go?pageNum=${i }'">${i }</button>
+ --%>
+ <a class="pagingBtn" href="otInfo.go?pageNum=${i }">${i }</a>
+ </c:forEach>
+
+   <!-- 다음 -->
+  <c:if test="${endPage < totPage}">
+ 	<a href="otInfo.go?pageNum=${endPage + 1}">Nex</a>
+ </c:if>
+ <hr class="pagingHr">
+	</div>
 </form>
 <br>
 <jsp:include page="../footer.jsp" />

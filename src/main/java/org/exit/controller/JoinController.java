@@ -28,7 +28,6 @@ public class JoinController {
 	@RequestMapping(value="/join.do", method = RequestMethod.POST)
 	@ResponseBody
 	public String join(DP_MemberVO dpmvo) {
-		System.out.println("111");
 		dpms.DP_MemberInsert(dpmvo);
 		
 		return "welcome";

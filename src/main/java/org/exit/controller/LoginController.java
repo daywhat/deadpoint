@@ -41,7 +41,7 @@ public class LoginController {
 		DP_MemberVO vo = dpms.DP_MemberLogin(dpmvo);
 		
 		if(vo !=null){
-			model.addAttribute("id", vo.getDp_name());
+			model.addAttribute("id", vo);
 			msg ="1";
 		}else if(vo == null) {
 			msg ="0";

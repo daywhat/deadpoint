@@ -16,7 +16,7 @@
 		<ul class="fontBold">
 			<li><a class="" href="intro.go">deadpoint</a></li>
 			<li><a class="" href="totalShop.go">shop</a></li>
-			<li><a class="" href="otInfo.go">otinfo</a></li>
+			<li><a class="" id="otInfoBtn" href="otInfo.go">otinfo</a></li>
 			<li><a class="" href="review.go">review</a></li>
 			<li><a class="" href="insta.go">insta</a></li>
 			<li><a class="" href="notice.go">notice</a></li>

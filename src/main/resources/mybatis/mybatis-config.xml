@@ -14,6 +14,7 @@
       <typeAlias type="org.exit.domain.DP_OtInfoVO" alias="dpotvo"/>
       <typeAlias type="org.exit.domain.DP_ReviewVO" alias="dprvo"/>
       <typeAlias type="org.exit.domain.DP_ProductVO" alias="dppvo"/>
+      <typeAlias type="org.exit.domain.Paging" alias="paging" />
    </typeAliases>
 
 

@@ -3,16 +3,20 @@ package org.exit.persistence;
 import java.util.List;
 
 import org.exit.domain.DP_OtInfoVO;
+import org.exit.domain.Paging;
 
 //ㅡㅡ(옷정보 커뮤니티)ㅡㅡ///////////////////////////////////////////////////
 public interface DP_OtInfoDAO {
 	
 	//게시물 작성
-	public void DP_OtWrite(DP_OtInfoVO dpovo);
+	public void DP_OtWrite(DP_OtInfoVO dpotvo);
 	
 	//게시물 리스트 보기
-	public List<DP_OtInfoVO> DP_OtList();
-
+	public List<DP_OtInfoVO> DP_OtList(Paging paging);
+	
+	//게시물 리스트 카운트
+	public int DP_OtListCount();
+	
 		//게시물 리스트 상세보기
 		public DP_OtInfoVO DP_OtListDetail(int c_id);
 	

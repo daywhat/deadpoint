@@ -6,7 +6,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="otinfoMapper">
 
 <!-- 게시물 작성 -->
-   <insert id="otWrite">
+   <insert id="otWrite" parameterType="dpotvo">
       INSERT INTO c_board (c_title , c_content 
                      , c_hit   , c_ref   , c_date 
                      , dp_id , dp_nick)
@@ -16,11 +16,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
    </insert>
 
 <!-- 게시물 리스트 보기 -->
-   <select id="otList">
+   <select id="otList" parameterType="paging" resultType="dpotvo">
       SELECT * 
-         FROM c_board
-         WHERE dp_id = #{dp_id}
+         FROM c_board limit #{sPage}, #{ePage}
    </select>
+<!-- 게시물 리스트 카운트 -->
+	<select id="otListCount" resultType="int">
+		SELECT count(*) FROM c_board
+	</select>
 
    <!-- 게시물 리스트 상세보기 -->
       <select id="otListDetail">
