@@ -1,5 +1,12 @@
 package org.exit.domain;
 
+/**
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		이정빈
+ */
+
+
 public class DP_MemberVO {
 	
 	private int 	dp_id;			//회원번호

@@ -2,6 +2,13 @@ package org.exit.domain;
 
 import java.sql.Date;
 
+/**
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		이정빈
+ */
+
+
 public class DP_ReviewVO {
 	
 	private int 	b_id;			//글 번호

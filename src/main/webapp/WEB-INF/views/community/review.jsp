@@ -11,59 +11,156 @@
 </head>
 <body>
 <jsp:include page="../nav.jsp" />
+<section class="reviewSession">
+<div class="reviewBatang">
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewRed.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트 1 / 김개똥 님
+				<br>
+				<i class="far fa-hand-point-up">&nbsp;0&nbsp;</i>&nbsp;<i class="fab fa-replyd">&nbsp;0&nbsp;</i>&nbsp;<i class="far fa-kiss-wink-heart">&nbsp;0</i>
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewGreen.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewBlack.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewRed.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewGreen.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewBlack.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewRed.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewGreen.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewBlack.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewRed.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewGreen.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewBlack.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewRed.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewGreen.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewBlack.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewRed.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewGreen.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
+
+	<div class="reviewItem" style="background: url(resources/img/reviewImg/reviewBlack.jpg) no-repeat">
+		<a href="#">
+			<div class="reviewText">
+				리뷰 테스트
+			</div>
+		</a>
+	</div>
 
 
-<form>
-<div class="reviewTxt"><h1>Review</h1></div>
-<br>
-<div class="reviewDiv">
-<table class="reviewTable">
-<!-- login Session 값 있으면 글쓰기 버튼 출력 -->
-<tr>
-	<td style="text-align: right;" colspan="4"><input type="button" value="Write"></td>
-</tr>
-<tr>
-<td colspan="4"></td>
-</tr>
-<tr>
-	<th class="thN1">No</th>
-	<th class="thN2">Subject</th>
-	<th class="thN3">Writer</th>
-	<th class="thN4">Hit</th>
-	<th class="thN5">Ref</th>
-</tr>
-
-<c:forEach items="reviewList" var="re">
-<tr>	
-	<td>${re.c_id}</td>
-	<td>${re.c_title}</td>
-	<td>${re.dp_nick}</td>
-	<td>${re.dp_hit}</td>
-	<td>${re.dp_ref}</td>
-	
-</tr>
-</c:forEach>
-<!-- <tr>
-	<td>2</td>
-	<td>옷정보 테스트 글 2</td>
-	<td>관리자</td>
-	<td>0</td>
-	<td>0</td>
-</tr>
-<tr>
-	<td>3</td>
-	<td>옷정보 테스트 글 3</td>
-	<td>관리자</td>
-	<td>0</td>
-	<td>0</td>
-</tr> -->
-	
-
-</table>
 </div>
-</form>
-<br>
-
+</section>
 <jsp:include page="../footer.jsp" />
 </body>
 </html>

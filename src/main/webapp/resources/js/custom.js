@@ -5,23 +5,45 @@
  * 비밀번호 값이 틀리면 0을 반환하여 아이디 비밀번호를 확인하라 alert창 호출
  */
 
-/*function login(dp_name, dp_pwd){
-	$.ajax({
-		type:"POST",
-		url:"login.do",
-		data: {"dp_name":$("#dp_name").val(), "dp_pwd":$dp_pwd},
-		success: function(data){
-			if(data == "1"){
-				location.href="intro.go";
-			}else if(data == "0"){
-				alert("아이디, 비밀번호를 확인하여 주십시오.");
-			}
-		}
-	})
-}*/
+function loginCheck() {
+
+    var username = $("#dp_name").val();
+    var password = $("#dp_pwd").val();
+    
+    if (!username || !password) {
+        alert("ID/비밀번호를 입력해주세요.");
+        return false;
+    }
+
+    try {
+        var rsaPublicKeyModulus = $("#rsaPublicKeyModulus").val();
+        var rsaPublicKeyExponent = $("#rsaPublicKeyExponent").val();
+        submitEncryptedForm(username,password, rsaPublicKeyModulus, rsaPublicKeyExponent);
+    } catch(err) {
+        alert(err + "121212");
+    }
+    return false;
+}
+
+
+function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPpublicKeyExponent) {
+    var rsa = new RSAKey();
+    rsa.setPublic(rsaPublicKeyModulus, rsaPpublicKeyExponent);
+
+    // 사용자ID와 비밀번호를 RSA로 암호화한다.
+    var securedUsername = rsa.encrypt(username);
+    var securedPassword = rsa.encrypt(password);
+
+    var securedLoginForm = document.getElementById("loginForm");
+    securedLoginForm.securedUsername.value = securedUsername;
+    securedLoginForm.securedPassword.value = securedPassword;
+    securedLoginForm.submit();
+}
+
 $(document).ready(function(){
 	$("#loginForm").submit(function(e){
 		e.preventDefault();
+
 		var data = $(this).serialize();
 		$.ajax({
 			url:"login.do",
@@ -39,7 +61,11 @@ $(document).ready(function(){
 	
 	
 	
+	
+	// Join
+	
 	$("#joinForm").submit(function(e){
+		
 		if($('#dp_nick').val() == ""){
 			alert("닉네임을 입력해주세요.");
 			return false;

@@ -1,13 +1,18 @@
 package org.exit.controller;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
- * Handles requests for the application home page.
+ * 첫화면 켜질떄 작동하는 메인 컨트롤러
+ * 메인 로고를 클릭시에 첫 화면으로 돌아올 수 있다.
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		이정빈
  */
+
+
 @Controller
 public class HomeController { 
 	

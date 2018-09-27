@@ -50,7 +50,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
       </delete>
 
 <!-- 샵에 상품 리스트 뿌리기 / 상품 상세보기-->
-   <!-- <select id="productList"></select> -->
-   
+ <select id="totproductList" resultType="dppvo">
+ 	      SELECT * 
+         FROM dp_product
+ </select>
+ 
+  <select id="mproductList" resultType="dppvo">
+ 	      SELECT * 
+         FROM dp_product where dppro_gender = '1'
+ </select>
+ 
+  <select id="fmproductList" resultType="dppvo">
+ 	      SELECT * 
+         FROM dp_product where dppro_gender = '2'
+ </select>
 
 </mapper>

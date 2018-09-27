@@ -10,6 +10,15 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/**
+ * Community 관련 컨트롤러
+ * otInfo, notice로 연결되어있다.
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		이정빈
+ */
+
+
 @Controller
 public class CommuController {
 	
@@ -35,5 +44,7 @@ public class CommuController {
 		return "redirect:/otInfo.go";
 	}
 
+	
+	
 	
 }

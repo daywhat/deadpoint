@@ -1,7 +1,6 @@
 package org.exit.controller;
 
 import javax.inject.Inject;
-import javax.servlet.http.HttpServletRequest;
 
 import org.exit.domain.DP_MemberVO;
 import org.exit.service.DP_MemberServiceImpl;
@@ -9,6 +8,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+/**
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		¿Ã¡§∫Û
+ */
+
 
 @Controller
 public class JoinController {

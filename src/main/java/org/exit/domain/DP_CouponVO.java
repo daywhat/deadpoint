@@ -2,6 +2,13 @@ package org.exit.domain;
 
 import java.util.Date;
 
+/**
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		ÀÌÁ¤ºó
+ */
+
+
 public class DP_CouponVO {
 	
 	private int cou_id;			//ÄíÆù ¹øÈ£(AI °ª)

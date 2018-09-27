@@ -1,5 +1,12 @@
 package org.exit.domain;
 
+/**
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		¿Ã¡§∫Û
+ */
+
+
 public class Paging {
 
 	private int sPage;

@@ -2,6 +2,13 @@ package org.exit.domain;
 
 import java.util.Date;
 
+/**
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		이정빈
+ */
+
+
 public class DP_OtInfoVO {
 	
 	private int 	c_id;			//글 번호

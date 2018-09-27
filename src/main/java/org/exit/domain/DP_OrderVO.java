@@ -2,6 +2,13 @@ package org.exit.domain;
 
 import java.util.Date;
 
+/**
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		이정빈
+ */
+
+
 public class DP_OrderVO {
 	
 	private int 	order_id;		//주문번호

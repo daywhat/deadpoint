@@ -5,18 +5,29 @@ import java.util.List;
 import javax.inject.Inject;
 
 import org.exit.domain.DP_OtInfoVO;
+import org.exit.domain.DP_ProductVO;
 import org.exit.domain.Paging;
 import org.exit.service.DP_OtInfoServiceImpl;
+import org.exit.service.DP_ProductServiceImpl;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+/**
+ * 
+ * @version 	1.0.1c 09/14/18
+ * @author 		ÀÌÁ¤ºó
+ */
+
 
 @Controller
 public class treeController {
 	
 	@Inject
 	private DP_OtInfoServiceImpl dpots;
+	@Inject 
+	public DP_ProductServiceImpl dpps;
 
 	// deadpoint  [ ¸íÈ­, ¸í¾ð »ðÀÔ ? ]
 	
@@ -28,9 +39,10 @@ public class treeController {
 		@RequestMapping(value = "/totalShop.go", method = RequestMethod.GET)
 		public String totalShop(Model model) {
 			
-
-			model.addAttribute("shopMenu", "click");
+			List<DP_ProductVO> dppvo = dpps.DP_ProductList();
 			
+			model.addAttribute("shopMenu", "click");
+			model.addAttribute("dppvo", dppvo);
 			return "shop/totalShop";
 		}
 		
@@ -39,8 +51,10 @@ public class treeController {
 		@RequestMapping(value = "/maleShop.go", method = RequestMethod.GET)
 		public String maleShop(Model model) {
 			
-			model.addAttribute("shopMenu", "click");
+			List<DP_ProductVO> dppvo = dpps.DP_mProductList();
 			
+			model.addAttribute("shopMenu", "click");
+			model.addAttribute("dppvo", dppvo);
 			return "shop/maleShop";
 		}
 		
@@ -49,8 +63,10 @@ public class treeController {
 		@RequestMapping(value = "/femaleShop.go", method = RequestMethod.GET)
 		public String femaleShop(Model model) {
 			
-			model.addAttribute("shopMenu", "click");
+			List<DP_ProductVO> dppvo = dpps.DP_fmProductList();
 			
+			model.addAttribute("shopMenu", "click");
+			model.addAttribute("dppvo", dppvo);
 			return "shop/femaleShop";
 		}
 		
