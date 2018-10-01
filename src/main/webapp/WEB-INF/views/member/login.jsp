@@ -13,6 +13,7 @@
 <div class="loginBatang">
 
 <img class="loginLogo" src="./resources/img/logo/login_Logo(white).png">
+<form id="loginForm" name="loginForm">
 <table class="loginTable">
             
    <tr>
@@ -24,17 +25,21 @@
       <td class="tdN2"><input type="password" id="dp_pwd" name="dp_pwd"></td>
    </tr>
    <tr>
-      <td colspan="2"><input type="button" value="Login" onclick="loginCheck()">&nbsp;<input type="button" value ="Join" onclick="location.href='join.go'"></td>
+      <td colspan="2"><input type="submit" value="Login">&nbsp;<input type="button" value ="Join" onclick="location.href='join.go'"></td>
    </tr>
 
 </table>
-			<input type="hidden" id="rsaPublicKeyModulus" value="${publicKeyModulus}" />
+
+<%-- 			<input type="hidden" id="rsaPublicKeyModulus" value="${publicKeyModulus}" />
             <input type="hidden" id="rsaPublicKeyExponent" value="${publicKeyExponent}" />
-<form id="loginForm" name="loginForm" method="post">
+<form id="loginForm" name="loginForm" method="POST">
 	<input type="hidden" name="securedUsername" id="securedUsername" value="" />
-    <input type="hidden" name="securedPassword" id="securedPassword" value="" />
+    <input type="hidden" name="securedPassword" id="securedPassword" value="" /> --%>
+    
 </form>
 </div>
+
+
 <jsp:include page="../footer.jsp" />
 </body>
 </html>

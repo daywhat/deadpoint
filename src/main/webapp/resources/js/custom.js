@@ -4,7 +4,7 @@
  * 비밀번호 값이 맞으면 1을 반환하여 intro.go 호출
  * 비밀번호 값이 틀리면 0을 반환하여 아이디 비밀번호를 확인하라 alert창 호출
  */
-
+/*
 function loginCheck() {
 
     var username = $("#dp_name").val();
@@ -38,7 +38,9 @@ function submitEncryptedForm(username, password, rsaPublicKeyModulus, rsaPpublic
     securedLoginForm.securedUsername.value = securedUsername;
     securedLoginForm.securedPassword.value = securedPassword;
     securedLoginForm.submit();
-}
+}*/
+
+
 
 $(document).ready(function(){
 	$("#loginForm").submit(function(e){

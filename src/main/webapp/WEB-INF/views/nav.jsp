@@ -30,6 +30,7 @@
 			<li><a class=""href="myPage.do">MyPage</a>/<a class="" href="logout.do">logout</a></li>
 			<li><a class="" href="cart.go"><i class="fas fa-shopping-cart"></i></a></li>
 			<li><a class="" href="sending.go"><i class="fas fa-truck"></i></a></li>
+			<li><a class="" href="#"><i class="fas fa-question-circle"></i></a></li>
 		</c:if>
 		<c:if test="${id == null}">
 			<!-- unlogin -->

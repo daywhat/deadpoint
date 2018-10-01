@@ -45,8 +45,8 @@ public class LoginController {
 	@RequestMapping(value = "login.go", method = RequestMethod.GET)
 	public String loginGo(HttpServletRequest req, HttpServletResponse res) throws NoSuchAlgorithmException, InvalidKeySpecException {
 
-		KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
-		generator.initialize(1024);
+/*		KeyPairGenerator generator = KeyPairGenerator.getInstance("RSA");
+		generator.initialize(2048);
 		KeyPair keyPair = generator.genKeyPair();
 		KeyFactory keyFactory = KeyFactory.getInstance("RSA");
 		PublicKey publicKey = keyPair.getPublic();
@@ -61,6 +61,8 @@ public class LoginController {
 		
 		req.setAttribute("publicKeyModulus", publicKeyModulus);
 		req.setAttribute("publicKeyExponent", publicKeyExponent);
+		*/
+		
 		
 		return "member/login";
 	}
@@ -75,14 +77,14 @@ public class LoginController {
 	
 	@RequestMapping(value = "login.do", method = RequestMethod.POST)
 	@ResponseBody
-	public String loginDo(String securedUsername, String securedPassword, DP_MemberVO dpmvo, @RequestAttribute("RSA_P_KEY") PrivateKey privateKey , Model model, SessionStatus sessionStatus) throws ServletException {
+	public String loginDo(DP_MemberVO dpmvo, Model model, SessionStatus sessionStatus) throws ServletException {
  
 		String msg = "";
 		
-		DP_MemberVO vo = new DP_MemberVO();
+
 
 	        
-	        if (privateKey == null) {
+/*	        if (privateKey == null) {
 	            throw new RuntimeException("암호화 비밀키 정보를 찾을 수 없습니다.");
 	        }
 	        try {
@@ -93,11 +95,11 @@ public class LoginController {
 		        vo = dpms.DP_MemberLogin(dpmvo);
 	        } catch (Exception ex) {
 	            throw new ServletException(ex.getMessage(), ex);
-	        }
+	        }*/
 
 	        
 	        
-	        
+		DP_MemberVO vo = dpms.DP_MemberLogin(dpmvo);
 		
 		
 		if(vo !=null){
